@@ -1,0 +1,106 @@
+{
+    "label": "Twitter",
+    "name": "twitter",
+    "apiVersion": "v1",
+    "internal": false,
+    "configurationType": "PER_USER",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": false
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/twitter.png",
+    "configurationHelpUrl": "/endpoints_twitter.html#configuration",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [],
+    "functions": [
+        {
+            "label": "App GET",
+            "name": "_appGet",
+            "functionType": "GLOBAL"
+        },
+        {
+            "label": "User GET",
+            "name": "_get",
+            "functionType": "PER_USER"
+        },
+        {
+            "label": "User POST",
+            "name": "_post",
+            "functionType": "PER_USER"
+        },
+        {
+            "label": "User Upload",
+            "name": "_uploadMedia",
+            "functionType": "PER_USER"
+        },
+        {
+            "label": "User Upload Status",
+            "name": "_uploadStatus",
+            "functionType": "PER_USER"
+        },
+        {
+            "label": "User Pre-connect",
+            "name": "preConnectUser",
+            "functionType": "PER_USER"
+        }
+    ],
+    "scripts":[
+        "functions.js"
+    ],
+    "configuration":[
+        {
+            "name": "apiKey",
+            "label": "Consumer Key (API Key)",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "apiSecret",
+            "label": "Consumer Secret (API Secret)",
+            "type": "password"
+        },
+        {
+            "name": "oauthCallback",
+            "label": "OAuth callback",
+            "description": "The OAuth callback to configure in your Twitter App",
+            "type": "label",
+            "value": "config.WEBHOOK_URL+'/authCallback'"
+        }
+    ],
+    "userConfiguration":[
+        {
+            "name": "token",
+            "label": "Token",
+            "type": "text",
+            "visibility": false
+        },
+        {
+            "name": "verifier",
+            "label": "Verifier",
+            "type": "text",
+            "visibility": false
+        },
+        {
+            "name" : "connectButton",
+            "label" : "Connect to Twitter",
+            "type" : "button",
+            "typeOptions": {
+                "color": "primary",
+                "icon": "zmdi-twitter",
+                "action": "var fnUrl = '/metadata/integrations/endpoints/'+config.ENDPOINT_NAME+'/function/preConnectUser';\nvar self = this;\n\nsys.ws.put(fnUrl).then(function (res) {\n\tvar url = 'https://api.twitter.com/oauth/authorize?oauth_token=' + res.oauth_token;\n\tvar win = window.open(url, 'Authorization page', 'toolbar=no,scrollbars=no,location=no,statusbar=no,menubar=no,resizable=0,width=500,height=600,left=' + ((screen.width / 2) - 250) + ',top=' + ((screen.height / 2) - 250) + ',');\n\tvar intervalFn = function () {\n\t\ttry {\n\t\t\tif (!win || !win.document) {\n\t\t\t\twindow.clearInterval(pollTimer);\n\t\t\t} else {\n\t\t\t\tif (win.document.URL.indexOf('/authCallback') != -1) {\n\t\t\t\t\twin.innerWidth = 100;\n\t\t\t\t\twin.innerHeight = 100;\n\t\t\t\t\twin.screenX = screen.width;\n\t\t\t\t\twin.screenY = screen.height;\n\t\t\t\t\twindow.clearInterval(pollTimer);\n\t\t\t\t\turl = win.document.URL;\n\t\t\t\t\tvar pos = url.indexOf('oauth_token=');\n\t\t\t\t\tvar limit;\n\t\t\t\t\tif (pos > -1) {\n\t\t\t\t\t\tvar token = url.substring(pos + 12);\n\t\t\t\t\t\tlimit = token.indexOf(\"&\");\n\t\t\t\t\t\tif (limit > -1) {\n\t\t\t\t\t\t\ttoken = token.substring(0, limit);\n\t\t\t\t\t\t}\n\t\t\t\t\t\tconfig.token = token;\n\t\t\t\t\t}\n\t\t\t\t\tpos = url.indexOf('oauth_verifier=');\n\t\t\t\t\tif (pos > -1) {\n\t\t\t\t\t\tvar verifier = url.substring(pos + 15);\n\t\t\t\t\t\tlimit = verifier.indexOf(\"&\");\n\t\t\t\t\t\tif (limit > -1) {\n\t\t\t\t\t\t\tverifier = verifier.substring(0, limit);\n\t\t\t\t\t\t}\n\t\t\t\t\t\tconfig.verifier = verifier;\n\t\t\t\t\t}\n\t\t\t\t\t\tif (utils.connectToService) {\n\t\t\t\t\t\t\tutils.connectToService();\n\t\t\t\t\t\t}\n\t\t\t\t\ttry {\n\t\t\t\t\t\twin.close();\n\t\t\t\t\t} catch (e) {\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t} catch (e) {\n\t\t}\n\t};\n\n\tvar pollTimer = window.setInterval(function () {\n\t\tintervalFn.apply(self);\n\t}, 500);\n});"
+            },
+            "visibility" : "config.ENDPOINT_STATUS == 'DISCONNECTED'"
+        }
+    ],
+    "userConfigurationButtons":{
+        "connect": false
+    }
+}
