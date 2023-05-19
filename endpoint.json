@@ -57,7 +57,10 @@
         "functions_old.js"
     ],
     "flowSteps":[
-        "apiCallTwitter"
+        "apiCallTwitter",
+        "getUserTwitter",
+        "deleteTweetTwitter",
+        "createTweetTwitter"
     ],
     "configuration":[
         {
