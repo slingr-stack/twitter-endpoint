@@ -1,0 +1,26 @@
+{
+  "label": "Create a tweet",
+  "name": "createTweetTwitter",
+  "category": "integrations",
+  "description": "Creates a Tweet on behalf of an authenticated user.",
+  "inputs": [
+    {
+      "label": "Text",
+      "name": "text",
+      "description": "Text of the Tweet being created.",
+      "type": "text",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "label": "Delete a tweet",
+  "name": "deleteTweetTwitter",
+  "category": "integrations",
+  "description": "Allows a user or authenticated user ID to delete a Tweet.",
+  "inputs": [
+    {
+      "label": "Tweet Id",
+      "name": "tweetId",
+      "description": "The Tweet ID you are deleting.",
+      "type": "text",
+      "required": "true",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

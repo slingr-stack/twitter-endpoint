@@ -1,0 +1,352 @@
+{
+  "label": "API call to twitter",
+  "name": "apiCallTwitter",
+  "category": "integrations",
+  "description": "This flow step will send generic request to twitter",
+  "inputs": [
+    {
+      "label": "Url",
+      "name": "url",
+      "description": "The method and path to which this endpoint is to send requests in a generic way.",
+      "type": "urlParams",
+      "required": "true",
+      "options": {
+        "type": "dropDown",
+        "possibleValues": [
+            {
+              "label": "GET /2/tweets/{id}"
+            },
+            {
+              "label": "GET /2/tweets"
+            },
+            {
+              "label": "GET /2/users/{id}"
+            },
+            {
+              "label": "GET /2/users"
+            },
+            {
+              "label": "GET /2/users/by/username/{username}"
+            },
+            {
+              "label": "GET /2/users/by"
+            },
+            {
+              "label": "GET /2/users/{id}/followers"
+            },
+            {
+              "label": "GET /2/users/{id}/following"
+            },
+            {
+              "label": "GET /2/users/{id}/blocking"
+            },
+            {
+              "label": "GET /2/lists/{id}"
+            },
+            {
+              "label": "GET /2/users/{id}/owned_lists"
+            },
+            {
+              "label": "GET /2/lists/{id}/tweets"
+            },
+            {
+              "label": "GET /2/lists/{id}/members"
+            },
+            {
+              "label": "GET /2/users/{id}/list_memberships"
+            },
+            {
+              "label": "GET /2/lists/{id}/followers"
+            },
+            {
+              "label": "GET /2/users/{id}/followed_lists"
+            },
+            {
+              "label": "GET /2/users/{id}/pinned_lists"
+            },
+            {
+              "label": "GET /2/users/{id}/muting"
+            },
+            {
+              "label": "GET /2/tweets/{id}/quote_tweets"
+            },
+            {
+              "label": "GET /2/tweets/search/recent"
+            },
+            {
+              "label": "GET /2/tweets/search/all"
+            },
+            {
+              "label": "GET /2/tweets/counts/recent"
+            },
+            {
+              "label": "GET /2/tweets/counts/all"
+            },
+            {
+              "label": "GET /2/tweets/search/stream/rules"
+            },
+            {
+              "label": "GET /2/tweets/search/stream"
+            },
+            {
+              "label": "GET /2/tweets/sample/stream"
+            },
+            {
+              "label": "GET /2/spaces/{id}"
+            },
+            {
+              "label": "GET /2/spaces"
+            },
+            {
+              "label": "GET /2/spaces/by/creator_id"
+            },
+            {
+              "label": "GET /2/spaces/{id}/buyers"
+            },
+            {
+              "label": "GET /2/spaces/search"
+            },
+            {
+              "label": "GET /2/compliance/jobs"
+            },
+            {
+              "label": "GET /2/compliance/jobs/{id}"
+            },
+            {
+              "label": "GET /2/users/{id}/liked_tweets"
+            },
+            {
+              "label": "GET /2/tweets/{id}/liking_users"
+            },
+            {
+              "label": "GET /2/tweets/{id}/retweeted_by"
+            },
+            {
+              "label": "GET /2/users/{id}/bookmarks"
+            },
+            {
+              "label": "GET /2/users/{id}/timelines/reverse_chronological"
+            },
+            {
+              "label": "GET /2/users/{id}/tweets"
+            },
+            {
+              "label": "GET /2/users/{id}/mentions"
+            },
+            {
+              "label": "GET /2/dm_conversations/with/{participant_id}/dm_events"
+            },
+            {
+              "label": "GET /2/dm_conversations/{dm_conversation_id}/dm_events"
+            },
+            {
+              "label": "GET /2/dm_events"
+            },
+            {
+              "label": "POST /2/users/{id}/following"
+            },
+            {
+              "label": "POST /2/users/{id}/blocking"
+            },
+            {
+              "label": "POST /2/lists"
+            },
+            {
+              "label": "POST /2/lists/{id}/members"
+            },
+            {
+              "label": "POST /2/users/{id}/followed_lists"
+            },
+            {
+              "label": "POST /2/users/{id}/pinned_lists"
+            },
+            {
+              "label": "POST /2/tweets"
+            },
+            {
+              "label": "POST /2/users/{id}/muting"
+            },
+            {
+              "label": "POST /2/tweets/search/stream/rules"
+            },
+            {
+              "label": "POST /2/compliance/jobs"
+            },
+            {
+              "label": "POST /2/users/{id}/likes"
+            },
+            {
+              "label": "POST /2/users/{id}/retweets"
+            },
+            {
+              "label": "POST /2/users/{id}/bookmarks"
+            },
+            {
+              "label": "POST /2/dm_conversations/with/{participant_id}/messages"
+            },
+            {
+              "label": "POST /2/dm_conversations"
+            },
+            {
+              "label": "POST /2/dm_conversations/{dm_conversation_id}/messages"
+            },
+            {
+              "label": "DELETE /2/users/{source_user_id}/following/{target_user_id}"
+            },
+            {
+              "label": "DELETE /2/users/{source_user_id}/blocking/{target_user_id}"
+            },
+            {
+              "label": "DELETE /2/lists/{id}"
+            },
+            {
+              "label": "DELETE /2/lists/{id}/members/{user_id}"
+            },
+            {
+              "label": "DELETE /2/users/{id}/followed_lists/{list_id}"
+            },
+            {
+              "label": "DELETE /2/lists/{id}/pinned_lists/{list_id}"
+            },
+            {
+              "label": "DELETE /2/tweets/{id}"
+            },
+            {
+              "label": "DELETE /2/users/{source_user_id}/muting/{target_user_id}"
+            },
+            {
+              "label": "DELETE /2/users/{id}/likes/{tweet_id}"
+            },
+            {
+              "label": "DELETE /2/users/{id}/retweets/{source_tweet_id}"
+            },
+            {
+              "label": "DELETE /2/users/{id}/bookmarks/{tweet_id}"
+            },
+            {
+              "label": "PUT /2/lists/{id}"
+            },
+            {
+              "label": "PUT /2/tweets/{id}/hidden"
+            }
+        ]
+      }
+    },
+    {
+      "label": "Headers",
+      "name": "headers",
+      "description": "Let the client and the server pass additional information with the HTTP request in a key value format. (e.g. key=ABC123)",
+      "type": "keyValue"
+    },
+    {
+      "label": "Query Params",
+      "name": "params",
+      "description": "Parameters attached to the end of a url in a key value format. (e.g. key=ABC123)",
+      "type": "keyValue"
+    },
+    {
+      "label": "Body",
+      "name": "body",
+      "type": "json",
+      "description": "Content to be sent to the server.",
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Override Settings",
+      "name": "overrideSettings",
+      "type": "boolean",
+      "description": "If true, allows adding configurations",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Follow Redirects",
+      "name": "followRedirects",
+      "type": "boolean",
+      "description": "Follow the redirects when a HTTP request is executed",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Download",
+      "name": "download",
+      "type": "boolean",
+      "description": "Indicates that the resource has to be downloaded into a file instead of returning it in the response.",
+      "visibility": "config.overrideSettings && config.events != \"fileDownloaded\"",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "File Name",
+      "name": "fileName",
+      "description": "If provided, the file will be stored with this name. If empty the file name will be calculated from the URL.",
+      "visibility": "(config.overrideSettings && config.download) || config.events === \"fileDownloaded\"",
+      "type": "text",
+      "options": {
+        "allowContextSelector": "true"
+      }
+    },
+    {
+      "label": "Full Response",
+      "name": "fullResponse",
+      "type": "boolean",
+      "description": "Include extended information about response",
+      "visibility": "config.overrideSettings",
+      "defaultValue": false,
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Connection timeout",
+      "name": "connectionTimeout",
+      "description": "Connect timeout interval, in milliseconds (0 = infinity). Default value: 5000 ms (5 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "5000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.connectionTimeout || utils.isPlaceholder(config.connectionTimeout) || utils.getInteger(config.connectionTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    },
+    {
+      "label": "Read timeout",
+      "name": "readTimeout",
+      "description": "Read timeout interval, in milliseconds (0 = infinity). Default value: 60000 ms (60 sec)",
+      "visibility": "config.overrideSettings",
+      "type": "text",
+      "defaultValue": "60000",
+      "typeOptions": {
+        "validation": {
+          "function": "!config.readTimeout || utils.isPlaceholder(config.readTimeout) || utils.getInteger(config.readTimeout) >= 0",
+          "message": "The time must be a valid placeholder or a positive integer greater than or equal to 0. "
+        }
+      },
+      "options": {
+        "allowContextSelector": "false"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "label": "Response",
+      "name": "response",
+      "type": "object",
+      "description": "The response to external URL"
+    }
+  ]
+}

@@ -53,7 +53,14 @@
         }
     ],
     "scripts":[
-        "functions.js"
+        "functions.js",
+        "functions_old.js"
+    ],
+    "flowSteps":[
+        "apiCallTwitter",
+        "getUserTwitter",
+        "deleteTweetTwitter",
+        "createTweetTwitter"
     ],
     "configuration":[
         {

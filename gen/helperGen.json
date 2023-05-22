@@ -1,0 +1,654 @@
+{
+  "fileName": "functions_new",
+  "endpointName": "twitter",
+  "apiDescriptors": [
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/:id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/by/username/:username"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/by"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/followers"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/following"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/following"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:source_user_id/following/:target_user_id"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/blocking"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/blocking"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:source_user_id/blocking/:target_user_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/owned_lists"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id/tweets"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id/members"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id/members/:user_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id/members"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/list_memberships"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/followed_lists"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/followed_lists/:list_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id/followers"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/followed_lists"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/pinned_lists"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/lists/:id/pinned_lists/:list_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/pinned_lists"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/:id"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/muting"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:source_user_id/muting/:target_user_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/muting"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/:id/quote_tweets"
+    },
+    {
+      "method": "PUT",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/:id/hidden"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/search/recent"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/search/all"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/counts/recent"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/counts/all"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/search/stream/rules"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/search/stream/rules"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/search/stream"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/sample/stream"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/spaces/:id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/spaces"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/spaces/by/creator_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/spaces/:id/buyers"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/spaces/search"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/compliance/jobs"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/compliance/jobs"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/compliance/jobs/:id"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/likes"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/liked_tweets"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/:id/liking_users"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/likes/:tweet_id"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/retweets"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/tweets/:id/retweeted_by"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/retweets/:source_tweet_id"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/bookmarks"
+    },
+    {
+      "method": "DELETE",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/bookmarks/:tweet_id"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/bookmarks"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/timelines/reverse_chronological"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/tweets"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/users/:id/mentions"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/dm_conversations/with/:participant_id/dm_events"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/dm_conversations/:dm_conversation_id/dm_events"
+    },
+    {
+      "method": "GET",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/dm_events"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/dm_conversations/with/:participant_id/messages"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/dm_conversations"
+    },
+    {
+      "method": "POST",
+      "prefix": "",
+      "suffix": "",
+      "omittableUrlParts": [
+            "2"
+      ],
+      "url": "/2/dm_conversations/:dm_conversation_id/messages"
+    }
+  ]
+}
